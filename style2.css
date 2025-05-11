@@ -1,0 +1,383 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Starry background with twinkling animation */
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Twinkling stars */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #aad8ff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Make the stars appear randomly */
+
+/* Typing animation for bio */
+.bio {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid #fff;
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Skill Progress Bars */
+.skill {
+  margin: 1.5rem 0;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress-bar:before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: #4caf50; /* green */
+  border-radius: 10px;
+  width: 0%;
+  transition: width 2s ease;
+}
+
+/* Progress Bar Colors */
+.progress-bar[data-progress="90"]:before {
+  width: 90%;
+}
+.progress-bar[data-progress="80"]:before {
+  width: 80%;
+}
+.progress-bar[data-progress="70"]:before {
+  width: 70%;
+}
+/* Skill Progress Bars */
+.skill {
+  margin: 1.5rem 0;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initial position for animation */
+  transition: opacity 1s ease, transform 1s ease; /* Animation timing */
+}
+
+.progress-bar.active {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+.progress-bar:before {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: #4caf50; /* green */
+  border-radius: 10px;
+  width: 0%;
+  transition: width 2s ease; /* Animate the width change */
+}
+
+.progress-bar[data-progress="90"]:before {
+  width: 90%;
+}
+.progress-bar[data-progress="80"]:before {
+  width: 80%;
+}
+.progress-bar[data-progress="70"]:before {
+  width: 70%;
+}
+h2 {
+  font-size: 2rem;
+  color: #aad8ff;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Ensure the modal stays on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  padding-top: 60px;
+  animation: fadeInModal 1s ease;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal fade-in animation */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  backdrop-filter: blur(4px);
+  padding-top: 60px;
+  animation: fadeInModal 1s ease;
+}
+
+.modal-content {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: popIn 0.5s ease;
+}
+
+.modal-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  animation: textFade 2s ease-in-out;
+}
+
+.close-btn {
+  color: #ffdddd;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-right: -10px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes textFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* View More Button */
+.view-more-btn {
+  position: absolute; /* Position it relative to the container */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid #fff; /* White border */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #fff; /* White background on hover */
+  color: #4caf50; /* Green text on hover */
+}
+
+
+.music-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  transition: background-color 0.3s ease;
+}
+
+.music-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
